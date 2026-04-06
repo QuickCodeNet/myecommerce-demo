@@ -1,0 +1,4 @@
+﻿UPDATE [AUCTIONS] 
+	SET [STATUS] = 'CLOSED' 
+WHERE [IsDeleted] = 0 
+	AND [ID] = @PRM_AUCTION_ID

@@ -1,0 +1,276 @@
+﻿{
+  "Modules": [
+    {
+      "Name": "IdentityModule",
+      "Description": "IdentityModule"
+    },
+    {
+      "Name": "AuctionManagementModule",
+      "Description": "AuctionManagementModule"
+    },
+    {
+      "Name": "OrderManagementModule",
+      "Description": "OrderManagementModule"
+    },
+    {
+      "Name": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule"
+    },
+    {
+      "Name": "ProductCatalogModule",
+      "Description": "ProductCatalogModule"
+    }
+  ],
+  "Models": [
+    {
+      "Name": "ApiMethodAccessGrants",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ApiMethodAccessGrant"
+    },
+    {
+      "Name": "ApiMethodDefinitions",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ApiMethodDefinition"
+    },
+    {
+      "Name": "AspNetRoles",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetRole"
+    },
+    {
+      "Name": "AspNetRoleClaims",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetRoleClaim"
+    },
+    {
+      "Name": "AspNetUsers",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUser"
+    },
+    {
+      "Name": "AspNetUserClaims",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserClaim"
+    },
+    {
+      "Name": "AspNetUserLogins",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserLogin"
+    },
+    {
+      "Name": "AspNetUserRoles",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserRole"
+    },
+    {
+      "Name": "AspNetUserTokens",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AspNetUserToken"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - AuditLog"
+    },
+    {
+      "Name": "ColumnTypes",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - ColumnType"
+    },
+    {
+      "Name": "KafkaEvents",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - KafkaEvent"
+    },
+    {
+      "Name": "Models",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - Model"
+    },
+    {
+      "Name": "Modules",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - Module"
+    },
+    {
+      "Name": "PermissionGroups",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PermissionGroup"
+    },
+    {
+      "Name": "PortalMenus",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalMenu"
+    },
+    {
+      "Name": "PortalPageAccessGrants",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalPageAccessGrant"
+    },
+    {
+      "Name": "PortalPageDefinitions",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - PortalPageDefinition"
+    },
+    {
+      "Name": "RefreshTokens",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - RefreshToken"
+    },
+    {
+      "Name": "TableComboboxSettings",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - TableComboboxSetting"
+    },
+    {
+      "Name": "TopicWorkflows",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule - TopicWorkflow"
+    },
+    {
+      "Name": "Auctions",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - Auction"
+    },
+    {
+      "Name": "AuctionItems",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - AuctionItem"
+    },
+    {
+      "Name": "AuctionSettlements",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - AuctionSettlement"
+    },
+    {
+      "Name": "AuctionWatchlists",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - AuctionWatchlist"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - AuditLog"
+    },
+    {
+      "Name": "Bids",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - Bid"
+    },
+    {
+      "Name": "BidIncrementRules",
+      "ModuleName": "AuctionManagementModule",
+      "Description": "AuctionManagementModule - BidIncrementRule"
+    },
+    {
+      "Name": "Addresses",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - Address"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - AuditLog"
+    },
+    {
+      "Name": "Orders",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - Order"
+    },
+    {
+      "Name": "OrderItems",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - OrderItem"
+    },
+    {
+      "Name": "OrderNotes",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - OrderNote"
+    },
+    {
+      "Name": "OrderStatusHistories",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - OrderStatusHistory"
+    },
+    {
+      "Name": "ShippingMethods",
+      "ModuleName": "OrderManagementModule",
+      "Description": "OrderManagementModule - ShippingMethod"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - AuditLog"
+    },
+    {
+      "Name": "GatewayConfigs",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - GatewayConfig"
+    },
+    {
+      "Name": "Payments",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - Payment"
+    },
+    {
+      "Name": "PaymentGateways",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - PaymentGateway"
+    },
+    {
+      "Name": "PaymentMethods",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - PaymentMethod"
+    },
+    {
+      "Name": "Refunds",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - Refund"
+    },
+    {
+      "Name": "TransactionLogs",
+      "ModuleName": "PaymentProcessingModule",
+      "Description": "PaymentProcessingModule - TransactionLog"
+    },
+    {
+      "Name": "AuditLogs",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - AuditLog"
+    },
+    {
+      "Name": "Brands",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - Brand"
+    },
+    {
+      "Name": "Categories",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - Category"
+    },
+    {
+      "Name": "Products",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - Product"
+    },
+    {
+      "Name": "ProductAttributes",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - ProductAttribute"
+    },
+    {
+      "Name": "ProductAttributeValues",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - ProductAttributeValue"
+    },
+    {
+      "Name": "ProductReviews",
+      "ModuleName": "ProductCatalogModule",
+      "Description": "ProductCatalogModule - ProductReview"
+    },
+    {
+      "Name": "Authentications",
+      "ModuleName": "IdentityModule",
+      "Description": "IdentityModule- Authentications"
+    }
+  ]
+}

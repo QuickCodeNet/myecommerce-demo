@@ -1,0 +1,6 @@
+﻿SELECT B.[ID], B.[NAME] 
+FROM [BRANDS] B 
+WHERE B.[IsDeleted] = 0 
+	AND B.[NAME] LIKE '%' + @PRM_BRAND_NAME + '%' 
+ORDER BY B.[ID] 
+OFFSET @StartIndex ROWS FETCH NEXT @PageSize ROWS ONLY 

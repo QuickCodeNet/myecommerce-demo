@@ -1,0 +1,1014 @@
+﻿{
+"KafkaEvents": [
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulemodulesModulesController",
+    "TopicName": "myecommerce-demo.identity_module.modules_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulemodulesnameModulesController",
+    "TopicName": "myecommerce-demo.identity_module.modules_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodulesnameModulesController",
+    "TopicName": "myecommerce-demo.identity_module.modules_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodelsdeletemodelswithmodulenamemodelmodulenameModelsController",
+    "TopicName": "myecommerce-demo.identity_module.models.delete_models_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulemodelsModelsController",
+    "TopicName": "myecommerce-demo.identity_module.models_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulemodelsnamemodulenameModelsController",
+    "TopicName": "myecommerce-demo.identity_module.models_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulemodelsnamemodulenameModelsController",
+    "TopicName": "myecommerce-demo.identity_module.models_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulepermissiongroupsPermissionGroupsController",
+    "TopicName": "myecommerce-demo.identity_module.permission_groups_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulepermissiongroupsnamePermissionGroupsController",
+    "TopicName": "myecommerce-demo.identity_module.permission_groups_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulepermissiongroupsnamePermissionGroupsController",
+    "TopicName": "myecommerce-demo.identity_module.permission_groups_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionsdeleteapimethoddefinitionswithmodulenameapimethoddefinitionmodulenameApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions.delete_api_method_definitions_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionsdeleteapimethoddefinitionswithmodelnameapimethoddefinitionmodelnameApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions.delete_api_method_definitions_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethoddefinitionsApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleapimethoddefinitionskeyApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethoddefinitionskeyApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionsdeleteportalpagedefinitionswithmodulenameportalpagedefinitionmodulenamePortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions.delete_portal_page_definitions_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionsdeleteportalpagedefinitionswithmodelnameportalpagedefinitionmodelnamePortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions.delete_portal_page_definitions_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpagedefinitionsPortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalpagedefinitionskeyPortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpagedefinitionskeyPortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethodaccessgrantsclearapimethodaccessgrantsApiMethodAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_access_grants.clear_api_method_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethodaccessgrantsApiMethodAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_access_grants_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleapimethodaccessgrantspermissiongroupnameapimethoddefinitionkeyApiMethodAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_access_grants_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleapimethodaccessgrantspermissiongroupnameapimethoddefinitionkeyApiMethodAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpageaccessgrantsclearportalpageaccessgrantsPortalPageAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_access_grants.clear_portal_page_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpageaccessgrantsPortalPageAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_access_grants_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalpageaccessgrantspermissiongroupnameportalpagedefinitionkeypageactionPortalPageAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_access_grants_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalpageaccessgrantspermissiongroupnameportalpagedefinitionkeypageactionPortalPageAccessGrantsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_access_grants_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenusdeleteportalmenuitemswithmodulenameportalmenukeyPortalMenusController",
+    "TopicName": "myecommerce-demo.identity_module.portal_menus.delete_portal_menu_items_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenusdeleteportalmenuitemswithmodelnameportalmenukeyportalmenunamePortalMenusController",
+    "TopicName": "myecommerce-demo.identity_module.portal_menus.delete_portal_menu_items_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalmenusPortalMenusController",
+    "TopicName": "myecommerce-demo.identity_module.portal_menus_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleportalmenuskeyPortalMenusController",
+    "TopicName": "myecommerce-demo.identity_module.portal_menus_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleportalmenuskeyPortalMenusController",
+    "TopicName": "myecommerce-demo.identity_module.portal_menus_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulecolumntypesColumnTypesController",
+    "TopicName": "myecommerce-demo.identity_module.column_types_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulecolumntypesidintColumnTypesController",
+    "TopicName": "myecommerce-demo.identity_module.column_types_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulecolumntypesidintColumnTypesController",
+    "TopicName": "myecommerce-demo.identity_module.column_types_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduletablecomboboxsettingsTableComboboxSettingsController",
+    "TopicName": "myecommerce-demo.identity_module.table_combobox_settings_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduletablecomboboxsettingstablenameTableComboboxSettingsController",
+    "TopicName": "myecommerce-demo.identity_module.table_combobox_settings_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduletablecomboboxsettingstablenameTableComboboxSettingsController",
+    "TopicName": "myecommerce-demo.identity_module.table_combobox_settings_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventscleankafkaeventswithmodulenameapimethoddefinitionsmodulenameKafkaEventsController",
+    "TopicName": "myecommerce-demo.identity_module.kafka_events.clean_kafka_events_with_module_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventscleankafkaeventswithmodelnameapimethoddefinitionsmodelnameKafkaEventsController",
+    "TopicName": "myecommerce-demo.identity_module.kafka_events.clean_kafka_events_with_model_name_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulekafkaeventsKafkaEventsController",
+    "TopicName": "myecommerce-demo.identity_module.kafka_events_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulekafkaeventstopicnameKafkaEventsController",
+    "TopicName": "myecommerce-demo.identity_module.kafka_events_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulekafkaeventstopicnameKafkaEventsController",
+    "TopicName": "myecommerce-demo.identity_module.kafka_events_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduletopicworkflowsTopicWorkflowsController",
+    "TopicName": "myecommerce-demo.identity_module.topic_workflows_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduletopicworkflowsidintTopicWorkflowsController",
+    "TopicName": "myecommerce-demo.identity_module.topic_workflows_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduletopicworkflowsidintTopicWorkflowsController",
+    "TopicName": "myecommerce-demo.identity_module.topic_workflows_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetrolesAspNetRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_roles_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetrolesidAspNetRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_roles_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetrolesidAspNetRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_roles_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetusersAspNetUsersController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_users_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetusersidAspNetUsersController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_users_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetusersidAspNetUsersController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_users_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiidentitymodulerefreshtokensupdaterefreshtokensrefreshtokentokenRefreshTokensController",
+    "TopicName": "myecommerce-demo.identity_module.refresh_tokens.update_refresh_tokens_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymodulerefreshtokensRefreshTokensController",
+    "TopicName": "myecommerce-demo.identity_module.refresh_tokens_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymodulerefreshtokensidintRefreshTokensController",
+    "TopicName": "myecommerce-demo.identity_module.refresh_tokens_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymodulerefreshtokensidintRefreshTokensController",
+    "TopicName": "myecommerce-demo.identity_module.refresh_tokens_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetroleclaimsAspNetRoleClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_role_claims_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetroleclaimsidintAspNetRoleClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_role_claims_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetroleclaimsidintAspNetRoleClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_role_claims_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserclaimsAspNetUserClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_claims_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserclaimsidintAspNetUserClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_claims_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserclaimsidintAspNetUserClaimsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_claims_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserloginsAspNetUserLoginsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_logins_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserloginsloginproviderproviderkeyAspNetUserLoginsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_logins_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserloginsloginproviderproviderkeyAspNetUserLoginsController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_logins_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetuserrolesAspNetUserRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_roles_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetuserrolesuseridroleidAspNetUserRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_roles_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetuserrolesuseridroleidAspNetUserRolesController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_roles_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleaspnetusertokensAspNetUserTokensController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_tokens_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleaspnetusertokensuseridAspNetUserTokensController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_tokens_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleaspnetusertokensuseridAspNetUserTokensController",
+    "TopicName": "myecommerce-demo.identity_module.asp_net_user_tokens_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleauditlogsAuditLogsController",
+    "TopicName": "myecommerce-demo.identity_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiidentitymoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.identity_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiidentitymoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.identity_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionsstartauctionauctionidintauctionstatusAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions.start_auction_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionscloseauctionauctionidintAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions.close_auction_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionscancelauctionauctionidintAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions.cancel_auction_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionssetwinnerauctionidintAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions.set_winner_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmoduleauctionsAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmoduleauctionsidintAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauctionsidintAuctionsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auctions_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmodulebidsmarkasoutbidbididintBidsController",
+    "TopicName": "myecommerce-demo.auction_management_module.bids.mark_as_outbid_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmodulebidsmarkaswinningbididintBidsController",
+    "TopicName": "myecommerce-demo.auction_management_module.bids.mark_as_winning_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmodulebidsBidsController",
+    "TopicName": "myecommerce-demo.auction_management_module.bids_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmodulebidsidintBidsController",
+    "TopicName": "myecommerce-demo.auction_management_module.bids_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmodulebidsidintBidsController",
+    "TopicName": "myecommerce-demo.auction_management_module.bids_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauctionwatchlistsunwatchauctionwatchlistauctionidintauctionwatchlistuseridintAuctionWatchlistsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_watchlists.unwatch_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmoduleauctionwatchlistsAuctionWatchlistsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_watchlists_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmoduleauctionwatchlistsidintAuctionWatchlistsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_watchlists_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauctionwatchlistsidintAuctionWatchlistsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_watchlists_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionsettlementsmarkaspaidauctionsettlementidintAuctionSettlementsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_settlements.mark_as_paid_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmoduleauctionsettlementsAuctionSettlementsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_settlements_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmoduleauctionsettlementsidintAuctionSettlementsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_settlements_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauctionsettlementsidintAuctionSettlementsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_settlements_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiauctionmanagementmoduleauctionitemsmarkasunavailableauctionitemidintAuctionItemsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_items.mark_as_unavailable_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmoduleauctionitemsAuctionItemsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_items_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmoduleauctionitemsidintAuctionItemsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_items_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauctionitemsidintAuctionItemsController",
+    "TopicName": "myecommerce-demo.auction_management_module.auction_items_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmodulebidincrementrulesBidIncrementRulesController",
+    "TopicName": "myecommerce-demo.auction_management_module.bid_increment_rules_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmodulebidincrementrulesidintBidIncrementRulesController",
+    "TopicName": "myecommerce-demo.auction_management_module.bid_increment_rules_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmodulebidincrementrulesidintBidIncrementRulesController",
+    "TopicName": "myecommerce-demo.auction_management_module.bid_increment_rules_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauctionmanagementmoduleauditlogsAuditLogsController",
+    "TopicName": "myecommerce-demo.auction_management_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiauctionmanagementmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.auction_management_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiauctionmanagementmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.auction_management_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleordersupdatestatusorderidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleordersmarkaspaidorderidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders.mark_as_paid_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleordersmarkasshippedorderidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders.mark_as_shipped_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleorderscancelorderorderidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders.cancel_order_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleordersOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleordersidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleordersidintOrdersController",
+    "TopicName": "myecommerce-demo.order_management_module.orders_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleorderitemsOrderItemsController",
+    "TopicName": "myecommerce-demo.order_management_module.order_items_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleorderitemsidintOrderItemsController",
+    "TopicName": "myecommerce-demo.order_management_module.order_items_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleorderitemsidintOrderItemsController",
+    "TopicName": "myecommerce-demo.order_management_module.order_items_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleaddressessetdefaultshippingaddressidintaddresscustomeridintAddressesController",
+    "TopicName": "myecommerce-demo.order_management_module.addresses.set_default_shipping_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleaddressesAddressesController",
+    "TopicName": "myecommerce-demo.order_management_module.addresses_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleaddressesidintAddressesController",
+    "TopicName": "myecommerce-demo.order_management_module.addresses_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleaddressesidintAddressesController",
+    "TopicName": "myecommerce-demo.order_management_module.addresses_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiordermanagementmoduleshippingmethodsdeactivateshippingmethodidintShippingMethodsController",
+    "TopicName": "myecommerce-demo.order_management_module.shipping_methods.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleshippingmethodsShippingMethodsController",
+    "TopicName": "myecommerce-demo.order_management_module.shipping_methods_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleshippingmethodsidintShippingMethodsController",
+    "TopicName": "myecommerce-demo.order_management_module.shipping_methods_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleshippingmethodsidintShippingMethodsController",
+    "TopicName": "myecommerce-demo.order_management_module.shipping_methods_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleordernotesOrderNotesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_notes_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleordernotesidintOrderNotesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_notes_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleordernotesidintOrderNotesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_notes_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleorderstatushistoriesOrderStatusHistoriesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_status_histories_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleorderstatushistoriesidintOrderStatusHistoriesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_status_histories_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleorderstatushistoriesidintOrderStatusHistoriesController",
+    "TopicName": "myecommerce-demo.order_management_module.order_status_histories_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiordermanagementmoduleauditlogsAuditLogsController",
+    "TopicName": "myecommerce-demo.order_management_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiordermanagementmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.order_management_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiordermanagementmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.order_management_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentsupdatestatuspaymentidintPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments.update_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentsmarkascapturedpaymentidintPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments.mark_as_captured_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentsmarkasvoidedpaymentidintPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments.mark_as_voided_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmodulepaymentsPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmodulepaymentsidintPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmodulepaymentsidintPaymentsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payments_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentmethodssetdefaultpaymentmethodidintpaymentmethodcustomeridintPaymentMethodsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_methods.set_default_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentmethodsdeactivatepaymentmethodidintPaymentMethodsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_methods.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmodulepaymentmethodsPaymentMethodsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_methods_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmodulepaymentmethodsidintPaymentMethodsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_methods_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmodulepaymentmethodsidintPaymentMethodsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_methods_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulepaymentgatewaysdeactivatepaymentgatewayidintPaymentGatewaysController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_gateways.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmodulepaymentgatewaysPaymentGatewaysController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_gateways_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmodulepaymentgatewaysidintPaymentGatewaysController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_gateways_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmodulepaymentgatewaysidintPaymentGatewaysController",
+    "TopicName": "myecommerce-demo.payment_processing_module.payment_gateways_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmodulegatewayconfigsGatewayConfigsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.gateway_configs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmodulegatewayconfigsidintGatewayConfigsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.gateway_configs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmodulegatewayconfigsidintGatewayConfigsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.gateway_configs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulerefundsapproverefundidintRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds.approve_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulerefundsprocessrefundidintRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds.process_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapipaymentprocessingmodulerefundsrejectrefundidintRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds.reject_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmodulerefundsRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmodulerefundsidintRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmodulerefundsidintRefundsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.refunds_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmoduletransactionlogsTransactionLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.transaction_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmoduletransactionlogsidlongTransactionLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.transaction_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmoduletransactionlogsidlongTransactionLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.transaction_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapipaymentprocessingmoduleauditlogsAuditLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapipaymentprocessingmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapipaymentprocessingmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.payment_processing_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmoduleproductsupdatepriceproductidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products.update_price_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmoduleproductsadjuststockproductidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products.adjust_stock_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmoduleproductssetstatusproductidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products.set_status_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmoduleproductsarchiveproductidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products.archive_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmoduleproductsProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmoduleproductsidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleproductsidintProductsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.products_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmodulecategoriesdeactivatecategoryidintCategoriesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.categories.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmodulecategoriesCategoriesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.categories_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmodulecategoriesidintCategoriesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.categories_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmodulecategoriesidintCategoriesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.categories_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmodulebrandsdeactivatebrandidintBrandsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.brands.deactivate_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmodulebrandsBrandsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.brands_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmodulebrandsidintBrandsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.brands_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmodulebrandsidintBrandsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.brands_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmoduleproductattributesProductAttributesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attributes_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmoduleproductattributesidintProductAttributesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attributes_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleproductattributesidintProductAttributesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attributes_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleproductattributevaluesremovebyproductproductattributevalueproductidintProductAttributeValuesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attribute_values.remove_by_product_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmoduleproductattributevaluesProductAttributeValuesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attribute_values_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmoduleproductattributevaluesidintProductAttributeValuesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attribute_values_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleproductattributevaluesidintProductAttributeValuesController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_attribute_values_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PatchapiproductcatalogmoduleproductreviewsapproveproductreviewidintProductReviewsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_reviews.approve_patch",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmoduleproductreviewsProductReviewsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_reviews_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmoduleproductreviewsidintProductReviewsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_reviews_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleproductreviewsidintProductReviewsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.product_reviews_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiproductcatalogmoduleauditlogsAuditLogsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.audit_logs_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PutapiproductcatalogmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.audit_logs_put",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "DeleteapiproductcatalogmoduleauditlogsidguidAuditLogsController",
+    "TopicName": "myecommerce-demo.product_catalog_module.audit_logs_delete",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleportalpagedefinitionsupdateportalpagepermissionPortalPageDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.portal_page_definitions.update_portal_page_permission_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiidentitymoduleapimethoddefinitionsupdateapipermissionApiMethodDefinitionsController",
+    "TopicName": "myecommerce-demo.identity_module.api_method_definitions.update_api_permission_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthregisterAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.register_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthloginAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.login_post",
+    "IsActive": true
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthvalidateAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.validate_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthrefreshAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.refresh_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthresendconfirmationemailAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.resendconfirmationemail_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthforgotpasswordAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.forgotpassword_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthresetpasswordAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.resetpassword_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "Postapiauthmanageuser2faAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.manage.user2fa_post",
+    "IsActive": false
+  },
+  {
+    "ApiMethodDefinitionKey": "PostapiauthmanageinfoAuthenticationsController",
+    "TopicName": "myecommerce-demo.auth.manage.info_post",
+    "IsActive": false
+  }
+]
+}

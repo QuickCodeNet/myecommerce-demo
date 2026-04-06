@@ -1,0 +1,4 @@
+﻿SELECT CASE WHEN EXISTS (
+SELECT 1 
+FROM [Models] M 
+WHERE M.[ModuleName] = @PRM_Model_ModuleName ) THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END

@@ -1,0 +1,13 @@
+.vs
+bin
+obj
+QuickCode.MyecommerceDemo.Api/bin
+QuickCode.MyecommerceDemo.Api/obj
+QuickCode.MyecommerceDemo.Portal/bin
+QuickCode.MyecommerceDemo.Portal/obj
+QuickCode.MyecommerceDemo.Web/bin
+QuickCode.MyecommerceDemo.Web/obj
+QuickCode.MyecommerceDemo.DataLayer/bin
+QuickCode.MyecommerceDemo.DataLayer/obj
+.DS_Store
+/src/.idea

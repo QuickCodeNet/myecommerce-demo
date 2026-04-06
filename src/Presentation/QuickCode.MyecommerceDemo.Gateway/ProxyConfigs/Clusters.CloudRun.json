@@ -1,0 +1,176 @@
+{
+  "ReverseProxy": {
+    "clusters": {
+      "auth-api": {
+        "clusterId": "auth-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-identity-module-821209474183.europe-west1.run.app"
+          }
+        }
+      },
+      "identity-module-api": {
+        "clusterId": "identity-module-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-identity-module-821209474183.europe-west1.run.app"
+          }
+        }
+      },
+      "auction-management-module-api": {
+        "clusterId": "auction-management-module-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-auction-management-module-821209474183.europe-west1.run.app"
+          }
+        }
+      },
+      "order-management-module-api": {
+        "clusterId": "order-management-module-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-order-management-module-821209474183.europe-west1.run.app"
+          }
+        }
+      },
+      "payment-processing-module-api": {
+        "clusterId": "payment-processing-module-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-payment-processing-module-821209474183.europe-west1.run.app"
+          }
+        }
+      },
+      "product-catalog-module-api": {
+        "clusterId": "product-catalog-module-api",
+        "destinations": {
+          "destination1": {
+            "address": "https://myecommerce-demo-product-catalog-module-821209474183.europe-west1.run.app"
+          }
+        }
+      }
+    },
+    "routes": {
+      "auth": {
+        "routeId": "auth",
+        "clusterId": "auth-api",
+        "authorizationPolicy": null,
+        "match": {
+          "path": "api/auth/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/auth/{**catch-all}"
+          }
+        ]
+      },
+      "identity-module": {
+        "routeId": "identity-module",
+        "clusterId": "identity-module-api",
+        "authorizationPolicy": "QuickCodeGatewayPolicy",
+        "match": {
+          "path": "api/identity-module/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/identity-module/{**catch-all}"
+          }
+        ]
+      },
+      "auction-management-module": {
+        "routeId": "auction-management-module",
+        "clusterId": "auction-management-module-api",
+        "authorizationPolicy": "QuickCodeGatewayPolicy",
+        "match": {
+          "path": "api/auction-management-module/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/auction-management-module/{**catch-all}"
+          }
+        ]
+      },
+      "order-management-module": {
+        "routeId": "order-management-module",
+        "clusterId": "order-management-module-api",
+        "authorizationPolicy": "QuickCodeGatewayPolicy",
+        "match": {
+          "path": "api/order-management-module/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/order-management-module/{**catch-all}"
+          }
+        ]
+      },
+      "payment-processing-module": {
+        "routeId": "payment-processing-module",
+        "clusterId": "payment-processing-module-api",
+        "authorizationPolicy": "QuickCodeGatewayPolicy",
+        "match": {
+          "path": "api/payment-processing-module/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/payment-processing-module/{**catch-all}"
+          }
+        ]
+      },
+      "product-catalog-module": {
+        "routeId": "product-catalog-module",
+        "clusterId": "product-catalog-module-api",
+        "authorizationPolicy": "QuickCodeGatewayPolicy",
+        "match": {
+          "path": "api/product-catalog-module/{**catch-all}",
+          "hosts": [
+            "localhost:6060",
+            "myecommerce-demo-gateway-821209474183.europe-west1.run.app",
+            "myecommerce-demo-gateway",
+            "quickcode-myecommerce-demo-gateway-api",
+            "myecommerce-demo-gateway.quickcode.net"
+          ]
+        },
+        "transforms": [
+          {
+            "PathPattern": "api/product-catalog-module/{**catch-all}"
+          }
+        ]
+      }
+    }
+  }
+}

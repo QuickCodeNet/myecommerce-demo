@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <GenerateCode>True</GenerateCode>
+        
+    </PropertyGroup>
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);1591;AD0001</NoWarn>
+        <UserSecretsId>089bf36e-214c-4a56-9682-7502b3f26351</UserSecretsId>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Build" />
+        <PackageReference Include="Newtonsoft.Json" />
+        <PackageReference Include="RestSharp" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Swagger" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+        <PackageReference Include="NSwag.MSBuild" >
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="AspNetCore.HealthChecks.UI" />
+        <PackageReference Include="AspNetCore.HealthChecks.UI.Client" />
+        <PackageReference Include="AspNetCore.HealthChecks.UI.SqlServer.Storage" />
+        <PackageReference Include="AspNetCore.HealthChecks.SqlServer" />
+        <PackageReference Include="AspNetCore.HealthChecks.NpgSql" />
+        <PackageReference Include="AspNetCore.HealthChecks.UI.PostgreSQL.Storage" />
+        <PackageReference Include="AspNetCore.HealthChecks.Elasticsearch" />
+        <PackageReference Include="AspNetCoreRateLimit" />
+        <PackageReference Include="Polly" />
+        <PackageReference Include="Polly.Extensions.Http" />
+        <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+        <PackageReference Include="OpenTelemetry" />
+        <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+        <PackageReference Include="OpenTelemetry.Instrumentation.EntityFrameworkCore" />
+        <PackageReference Include="OpenTelemetry.Exporter.Jaeger" />
+        <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" />
+        <PackageReference Include="Microsoft.AspNetCore.ResponseCompression" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Core\QuickCode.MyecommerceDemo.IdentityModule.Application\QuickCode.MyecommerceDemo.IdentityModule.Application.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\..\Infrastructure\QuickCode.MyecommerceDemo.IdentityModule.Persistence\QuickCode.MyecommerceDemo.IdentityModule.Persistence.csproj" PrivateAssets="All" />
+        <ProjectReference Include="..\..\..\..\Common\QuickCode.MyecommerceDemo.Common\QuickCode.MyecommerceDemo.Common.csproj" PrivateAssets="All" >
+            <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+        </ProjectReference>
+    </ItemGroup>
+    <Target Name="NSwag_swagger_out" BeforeTargets="PostBuildEvent" Condition="'$(GenerateCode)' == 'True'">
+        <Exec Command="dotnet new tool-manifest --force" EnvironmentVariables="DOTNET_ROLL_FORWARD=LatestMajor" />
+        <Exec Command="dotnet tool install Swashbuckle.AspNetCore.Cli --version 8.1.4" EnvironmentVariables="DOTNET_ROLL_FORWARD=LatestMajor" />
+        <Exec Condition="$([MSBuild]::IsOSUnixLike())" Command="dotnet swagger tofile --output $([MSBuild]::Escape('$(SolutionDir)swagger_files\$(AssemblyName)-Swagger.json')) $([MSBuild]::Escape('$(TargetDir)$(AssemblyName).dll')) v1" EnvironmentVariables="DOTNET_ROLL_FORWARD=LatestMajor;ASPNETCORE_ENVIRONMENT=Local;RUN_MIGRATION=NO;" />
+        <Exec Condition="$([MSBuild]::IsOSPlatform('Windows'))" Command="dotnet swagger tofile --output $([MSBuild]::Escape('$(SolutionDir)swagger_files\$(AssemblyName)-Swagger.json')) $([MSBuild]::Escape('$(TargetDir)$(AssemblyName).dll')) v1" EnvironmentVariables="DOTNET_ROLL_FORWARD=LatestMajor;ASPNETCORE_ENVIRONMENT=Local;RUN_MIGRATION=NO;" />
+    </Target>
+</Project>

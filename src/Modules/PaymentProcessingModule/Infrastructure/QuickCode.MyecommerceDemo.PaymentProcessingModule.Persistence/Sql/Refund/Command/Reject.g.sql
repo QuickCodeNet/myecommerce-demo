@@ -1,0 +1,4 @@
+﻿UPDATE [REFUNDS] 
+	SET [STATUS] = 'REJECTED' 
+WHERE [IsDeleted] = 0 
+	AND [ID] = @PRM_REFUND_ID

@@ -1,0 +1,130 @@
+services:
+  myecommerce-demo-pg-data:
+    container_name: "myecommerce-demo-pg-data"
+    image: postgres:18
+
+  myecommerce-demo-sql-data:
+    container_name: "myecommerce-demo-sql-data"
+    image: mcr.microsoft.com/mssql/server:2025-latest
+    
+  myecommerce-demo-mysql-data:
+    container_name: "myecommerce-demo-mysql-data"
+    image: mysql:8.3
+
+  myecommerce-demo-elasticsearch:
+    container_name: myecommerce-demo-elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+
+  myecommerce-demo-kibana:
+    container_name: myecommerce-demo-kibana
+    image: docker.elastic.co/kibana/kibana:8.11.0
+
+  quickcode-myecommerce-demo-gateway-api:
+    container_name: "quickcode-myecommerce-demo-gateway-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-gateway-api
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.MyecommerceDemo.Gateway/Dockerfile
+
+  quickcode-myecommerce-demo-identity-module-api:
+    container_name: "quickcode-myecommerce-demo-identity-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-identity-module-api
+    build:
+      context: . 
+      dockerfile: Modules/IdentityModule/Presentation/QuickCode.MyecommerceDemo.IdentityModule.Api/Dockerfile
+    depends_on:
+      - myecommerce-demo-sql-data
+      - myecommerce-demo-pg-data
+      
+
+  quickcode-myecommerce-demo-auction-management-module-api:
+    container_name: "quickcode-myecommerce-demo-auction-management-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-auction-management-module-api
+    build:
+      context: . 
+      dockerfile: Modules/AuctionManagementModule/Presentation/QuickCode.MyecommerceDemo.AuctionManagementModule.Api/Dockerfile
+    depends_on:
+      - myecommerce-demo-sql-data
+      - myecommerce-demo-pg-data
+      
+
+  quickcode-myecommerce-demo-order-management-module-api:
+    container_name: "quickcode-myecommerce-demo-order-management-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-order-management-module-api
+    build:
+      context: . 
+      dockerfile: Modules/OrderManagementModule/Presentation/QuickCode.MyecommerceDemo.OrderManagementModule.Api/Dockerfile
+    depends_on:
+      - myecommerce-demo-sql-data
+      - myecommerce-demo-pg-data
+      
+
+  quickcode-myecommerce-demo-payment-processing-module-api:
+    container_name: "quickcode-myecommerce-demo-payment-processing-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-payment-processing-module-api
+    build:
+      context: . 
+      dockerfile: Modules/PaymentProcessingModule/Presentation/QuickCode.MyecommerceDemo.PaymentProcessingModule.Api/Dockerfile
+    depends_on:
+      - myecommerce-demo-sql-data
+      - myecommerce-demo-pg-data
+      
+
+  quickcode-myecommerce-demo-product-catalog-module-api:
+    container_name: "quickcode-myecommerce-demo-product-catalog-module-api"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-product-catalog-module-api
+    build:
+      context: . 
+      dockerfile: Modules/ProductCatalogModule/Presentation/QuickCode.MyecommerceDemo.ProductCatalogModule.Api/Dockerfile
+    depends_on:
+      - myecommerce-demo-sql-data
+      - myecommerce-demo-pg-data
+      
+
+#[-WEB-]
+  
+  myecommerce-demo-zookeeper:
+    image: confluentinc/cp-zookeeper:7.5.0
+    container_name: myecommerce-demo-zookeeper
+    ports:
+      - "${ZOOKEEPER_PORT:-2181}:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  myecommerce-demo-kafka:
+    image: confluentinc/cp-kafka:7.5.0
+    container_name: myecommerce-demo-kafka
+    depends_on:
+      - myecommerce-demo-zookeeper
+    ports:
+      - "${KAFKA_PORT:-9092}:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: myecommerce-demo-zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://myecommerce-demo-kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  myecommerce-demo-kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    container_name: myecommerce-demo-kafdrop
+    ports:
+      - "${KAFDROP_PORT:-9000}:9000"
+    depends_on:
+      - myecommerce-demo-kafka
+    environment:
+      KAFKA_BROKERCONNECT: myecommerce-demo-kafka:9092
+        
+  quickcode-myecommerce-demo-portal:
+    container_name: "quickcode-myecommerce-demo-portal"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-portal
+    build:
+      context: .
+      dockerfile: Presentation/QuickCode.MyecommerceDemo.Portal/Dockerfile
+      
+  quickcode-myecommerce-demo-event-listener-service:
+    container_name: "quickcode-myecommerce-demo-event-listener-service"
+    image: ${DOCKER_REGISTRY-}quickcode-myecommerce-demo-event-listener-service
+    build:
+      context: .
+      dockerfile: Services/QuickCode.MyecommerceDemo.EventListenerService/Dockerfile

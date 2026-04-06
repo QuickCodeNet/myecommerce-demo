@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>BaseTitle - QuickCode Microservices Generator</title>
+    <link rel="icon" href="https://www.quickcode.net/favicon.ico" />
+    <!--[if IE]>
+    <link rel="shortcut icon" href="https://www.quickcode.net/favicon.ico" type="image/vnd.microsoft.icon" />
+    <![endif]-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.18.0/ace.js"></script>
+    <environment include="Development">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="/font-awesome/css/all.css" rel="stylesheet" />
+        <link href="/css/sb-admin-2.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.0/jsoneditor.min.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.0/jsoneditor.min.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link href="/font-awesome/css/all.css" rel="stylesheet" />
+        <link href="/css/sb-admin-2.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+        <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.0/jsoneditor.min.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsoneditor/9.10.0/jsoneditor.min.js" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/site.css" />
+    </environment>
+    <style>
+        /* Content area padding - defined early to prevent flash */
+        .content-area {
+            padding-top: 20px;
+        }
+        /* Mobile responsive - remove top padding on mobile */
+        @@media (max-width: 767.98px) {
+            .content-area {
+                padding-top: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body id="page-top">
+    <partial name="_CookieConsentPartial" />
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+                <div class="sidebar-brand-icon">
+  
+                    <img class="img-fluid p-2" src="/images/quickcode_logo.png" />
+                </div>
+                <div class=" d-flex-wrap">
+                     <img class="sidebar-brand-text img-fluid " src="/images/logo_s1.png" />
+                     <div class="sidebar-brand-text mx-2">MyecommerceDemo</div>
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0" style="border-color: rgba(255,255,255,0.1);">
+
+            <!-- User Info Section -->
+            <li class="nav-item">
+                @await Component.InvokeAsync(nameof(UserOperation))
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/" style="border-radius: 0.5rem;">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider" style="border-color: rgba(255,255,255,0.1); margin: 0.5rem 0;">
+
+            <!-- Heading -->
+            <div class="sidebar-heading" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); padding: 0.5rem 1.5rem;">
+                Management
+            </div>
+            <sidebar-item title="Access Grant Managers" key="AccessGrantManagers"></sidebar-item>
+            <sidebar-item title="Workflow Managers" key="WorkflowManagers"></sidebar-item>
+            <hr class="sidebar-divider" style="border-color: rgba(255,255,255,0.1); margin: 0.5rem 0;">
+            <sidebar-item title="Portal Settings" key="PortalSettings" ></sidebar-item>
+            <sidebar-item title="Permission Settings" key="PermissionSettings"></sidebar-item>
+            <hr class="sidebar-divider" style="border-color: rgba(255,255,255,0.1); margin: 0.5rem 0;">
+            <sidebar-item title="Audit Logs" key="AuditLogs" ></sidebar-item>
+            <!-- Divider -->
+            <hr class="sidebar-divider" style="border-color: rgba(255,255,255,0.1); margin: 0.5rem 0;">
+            <!-- Heading -->
+            <div class="sidebar-heading" style="font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); padding: 0.5rem 1.5rem;">
+                Modules
+            </div>
+            <sidebar-item title="Tables" key="Tables" ></sidebar-item>
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+            
+            
+            <!-- Logout -->
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-fw"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+
+
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content" class="content-area">
+                <!-- Topbar - Minimal (only sidebar toggle for mobile) -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-3 static-top shadow d-md-none">
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </nav>
+                @RenderBody()
+
+            </div>
+
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; QuickCode.Net 2019 - @Html.Raw(DateTime.Now.Year.ToString()). All rights reserved.</span>
+
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+    </div>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/Login/Logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Uml Diagram Preview</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="/images/loading.svg" id="modalImage" class="img-fluid" alt="Original Image" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <environment include="Development">
+        <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/js/bootstrap-toggle.js"></script>
+        <script src="/js/lazyload.js"></script>
+        <script src="/jquery-easing/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="/js/sb-admin-2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="/js/site.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+         <script src="/lib/jquery/dist/jquery.min.js"></script>
+        <script src="/js/bootstrap-toggle.js"></script>
+        <script src="/js/lazyload.js"></script>
+        <script src="/jquery-easing/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="/js/sb-admin-2.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <script src="/lib/jquery-validation/dist/jquery.validate.js"></script>
+        <script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+
+        <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="/js/site.js"></script>
+    </environment>
+
+    <style>
+        /* Restore lighter text colors for better readability */
+        body {
+            color: #858796 !important;
+        }
+        
+        .text-dark, h1, h2, h3, h4, h5, h6 {
+            color: #5a5c69 !important;
+        }
+        
+        .text-muted {
+            color: #858796 !important;
+        }
+        
+        /* Sidebar collapsed state styles */
+        #accordionSidebar.toggled .user-text-container {
+            display: none !important;
+        }
+        #accordionSidebar.toggled .user-icon-wrapper {
+            margin: 0 auto !important;
+            margin-right: 0 !important;
+        }
+        #accordionSidebar.toggled .user-info-container {
+            justify-content: center;
+        }
+        #accordionSidebar.toggled .user-icon-circle,
+        #accordionSidebar.toggled .img-profile {
+            width: 35px !important;
+            height: 35px !important;
+        }
+        #accordionSidebar.toggled .user-nav-link {
+            padding: 0.75rem !important;
+            text-align: center;
+        }
+        #accordionSidebar.toggled .user-name-below-icon {
+            display: block !important;
+        }
+        #accordionSidebar.toggled .user-name-below-icon > div {
+            text-align: center !important;
+            width: 100% !important;
+        }
+        #accordionSidebar.toggled .sidebar-heading {
+            font-size: 0.5rem !important;
+            padding: 0.25rem 0.5rem !important;
+            text-align: center !important;
+        }
+        #accordionSidebar.toggled .nav-link {
+            padding: 0.75rem !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        #accordionSidebar.toggled .nav-link i {
+            margin-right: 0 !important;
+            margin-bottom: 0.25rem !important;
+        }
+        #accordionSidebar.toggled .nav-link span {
+            display: block !important;
+            font-size: 0.65rem !important;
+            text-align: center !important;
+        }
+        /* Mobile responsive styles */
+        @@media (max-width: 767.98px) {
+            .sidebar-heading {
+                padding: 0.4rem 1rem !important;
+                font-size: 0.65rem !important;
+            }
+            .user-nav-link {
+                padding: 0.5rem 1rem !important;
+            }
+            .user-info-container {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+            }
+            .user-icon-wrapper {
+                margin-right: 0 !important;
+                margin-bottom: 0.5rem !important;
+                align-self: center !important;
+            }
+            .user-text-container {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .user-name {
+                font-size: 0.8rem !important;
+                text-align: center !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+                line-height: 1.3 !important;
+            }
+            .user-status {
+                font-size: 0.65rem !important;
+                text-align: center !important;
+                justify-content: center !important;
+            }
+            .user-icon-circle,
+            .img-profile {
+                width: 35px !important;
+                height: 35px !important;
+            }
+        }
+    </style>
+    <script>
+        // Initialize sidebar collapse after page load
+        // Initialize sidebar collapse - Bootstrap 5 compatible
+        $(document).ready(function() {
+            // Wait for Bootstrap 5 to be loaded
+            function initSidebarCollapse() {
+                if (typeof bootstrap === 'undefined' || typeof $ === 'undefined') {
+                    setTimeout(initSidebarCollapse, 100);
+                    return;
+                }
+                
+                // Bootstrap 5 collapse should work automatically with data-bs-toggle and data-bs-target
+                // But we need to ensure proper event handling for accordion behavior
+                
+                // Update aria-expanded on collapse events
+                $('#accordionSidebar .collapse').on('show.bs.collapse', function() {
+                    var collapseId = '#' + $(this).attr('id');
+                    var $trigger = $('[data-bs-target="' + collapseId + '"]');
+                    if ($trigger.length) {
+                        $trigger.attr('aria-expanded', 'true').removeClass('collapsed');
+                    }
+                });
+                
+                $('#accordionSidebar .collapse').on('hide.bs.collapse', function() {
+                    var collapseId = '#' + $(this).attr('id');
+                    var $trigger = $('[data-bs-target="' + collapseId + '"]');
+                    if ($trigger.length) {
+                        $trigger.attr('aria-expanded', 'false').addClass('collapsed');
+                    }
+                });
+                
+                // Ensure collapse triggers work - Bootstrap 5 should handle this automatically
+                // but we add explicit click handler as fallback
+                $('#accordionSidebar [data-bs-toggle="collapse"]').on('click', function(e) {
+                    e.stopPropagation();
+                    var target = $(this).attr('data-bs-target');
+                    if (target && typeof bootstrap !== 'undefined') {
+                        var $target = $(target);
+                        var collapseInstance = bootstrap.Collapse.getInstance($target[0]);
+                        if (!collapseInstance) {
+                            collapseInstance = new bootstrap.Collapse($target[0], {
+                                toggle: true,
+                                parent: '#accordionSidebar'
+                            });
+                        } else {
+                            collapseInstance.toggle();
+                        }
+                    }
+                });
+            }
+            
+            initSidebarCollapse();
+        });
+        
+        // Close sidebar collapse menus when clicking outside - separate handler
+        $(document).on('click', function(e) {
+            // Check if click is outside sidebar and not on a sidebar toggle button
+            var $target = $(e.target);
+            var isSidebarClick = $target.closest('#accordionSidebar').length > 0;
+            var isSidebarToggle = $target.closest('#sidebarToggle, #sidebarToggleTop').length > 0;
+            
+            if (!isSidebarClick && !isSidebarToggle) {
+                // Close all open collapses in sidebar
+                $('#accordionSidebar .collapse.show').each(function() {
+                    if (typeof bootstrap !== 'undefined') {
+                        var collapseInstance = bootstrap.Collapse.getInstance(this);
+                        if (collapseInstance) {
+                            collapseInstance.hide();
+                        }
+                    } else {
+                        $(this).collapse('hide');
+                    }
+                });
+            }
+        });
+        
+        $(document).ready(function() {
+            
+            // Helper: close all sidebar collapses if sidebar is in toggled (half-open) state
+            function closeSidebarCollapsesIfToggled() {
+                var isSidebarToggled = $('#accordionSidebar').hasClass('toggled') || $('body').hasClass('sidebar-toggled');
+                if (!isSidebarToggled) {
+                    return;
+                }
+
+                $('#accordionSidebar .collapse').each(function() {
+                    var $collapse = $(this);
+                    var collapseId = '#' + $collapse.attr('id');
+                    var $trigger = $('#accordionSidebar [data-bs-target=\"' + collapseId + '\"]');
+
+                    // Remove Bootstrap "show" class and update trigger state
+                    $collapse.removeClass('show');
+                    if ($trigger.length) {
+                        $trigger.addClass('collapsed').attr('aria-expanded', 'false');
+                    }
+
+                    // Also try to hide via Bootstrap Collapse API if already initialized
+                    if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                        var instance = bootstrap.Collapse.getInstance($collapse[0]);
+                        if (instance) {
+                            instance.hide();
+                        }
+                    }
+                });
+            }
+            
+            // Check if mobile (width < 768px)
+            var isMobile = $(window).width() < 768;
+            
+            // Check localStorage for sidebar state on page load
+            var sidebarState = localStorage.getItem('sidebarState');
+            
+            if (isMobile) {
+                // Mobile: sb-admin-2.js automatically toggles sidebar on load
+                // If saved state is 'expanded', we need to override and open it
+                // Use a delay to ensure sb-admin-2.js has already run
+                setTimeout(function() {
+                    if (sidebarState === 'expanded') {
+                        $('#accordionSidebar').removeClass('toggled');
+                        $('body').removeClass('sidebar-toggled');
+                    } else {
+                        // Ensure it's toggled (should already be, but just in case)
+                        $('#accordionSidebar').addClass('toggled');
+                        $('body').addClass('sidebar-toggled');
+                    }
+                    
+                    // After sidebar state is applied on mobile, ensure submenus are closed when toggled
+                    closeSidebarCollapsesIfToggled();
+                }, 150);
+            } else {
+                // Desktop: apply saved state directly
+                if (sidebarState === 'toggled') {
+                    $('#accordionSidebar').addClass('toggled');
+                    $('body').addClass('sidebar-toggled');
+                } else {
+                        $('#accordionSidebar').removeClass('toggled');
+                        $('body').removeClass('sidebar-toggled');
+                }
+                    
+                    // If sidebar starts in toggled (half-open) state, ensure all submenus are closed
+                    closeSidebarCollapsesIfToggled();
+            }
+
+             // Update wrapper classes based on checkbox state
+        $('.ios-switch').each(function() {
+            var $wrapper = $(this).closest('.ios-switch-wrapper');
+            if ($(this).is(':checked')) {
+                $wrapper.addClass('checked');
+            } else {
+                $wrapper.removeClass('checked');
+            }
+        });
+        
+        // Update on change
+        $(document).on('change', '.ios-switch', function() {
+            var $wrapper = $(this).closest('.ios-switch-wrapper');
+            if ($(this).is(':checked')) {
+                $wrapper.addClass('checked');
+            } else {
+                $wrapper.removeClass('checked');
+            }
+        });
+        
+        // Allow clicking on wrapper to toggle switch - iOS compatible with touch events
+        var touchStartTime = 0;
+        var touchStartTarget = null;
+        
+        $(document).on('touchstart', '.ios-switch-wrapper', function(e) {
+            touchStartTime = Date.now();
+            touchStartTarget = $(this);
+            e.preventDefault();
+        });
+        
+        $(document).on('touchend', '.ios-switch-wrapper', function(e) {
+            var touchEndTime = Date.now();
+            var touchDuration = touchEndTime - touchStartTime;
+            var $target = $(this);
+            
+            // Only trigger if it's a quick tap (not a swipe) and same target
+            if (touchDuration < 300 && touchStartTarget && touchStartTarget[0] === $target[0]) {
+                if (!$(e.target).is('.ios-switch')) {
+                    var $switch = $target.find('.ios-switch');
+                    // Don't toggle if switch is disabled
+                    if ($switch.is(':disabled')) {
+                        touchStartTarget = null;
+                        return false;
+                    }
+                    $switch.prop('checked', !$switch.prop('checked')).trigger('change');
+                }
+            }
+            touchStartTarget = null;
+            e.preventDefault();
+        });
+        
+        $(document).on('click', '.ios-switch-wrapper', function(e) {
+            // For non-touch devices, keep click handler
+            if (!('ontouchstart' in window)) {
+                if (!$(e.target).is('.ios-switch')) {
+                    var $switch = $(this).find('.ios-switch');
+                    // Don't toggle if switch is disabled
+                    if ($switch.is(':disabled')) {
+                        return false;
+                    }
+                    $switch.prop('checked', !$switch.prop('checked')).trigger('change');
+                }
+            }
+        });
+            
+            // Save sidebar state when toggled (both desktop and mobile)
+            // Use a simple approach: wait for sb-admin-2.js to handle the click, then save state
+            $(document).on('click', '#sidebarToggle, #sidebarToggleTop', function(e) {
+                // Wait a bit longer to ensure sb-admin-2.js has processed the click
+                setTimeout(function() {
+                    var isToggled = $('#accordionSidebar').hasClass('toggled') || $('body').hasClass('sidebar-toggled');
+                    localStorage.setItem('sidebarState', isToggled ? 'toggled' : 'expanded');
+                }, 300);
+            });
+            
+            // Handle window resize - save state when switching between mobile/desktop
+            $(window).on('resize', function() {
+                var newIsMobile = $(window).width() < 768;
+                if (newIsMobile !== isMobile) {
+                    isMobile = newIsMobile;
+                    // When switching to desktop, apply saved state
+                    if (!isMobile) {
+                        var savedState = localStorage.getItem('sidebarState');
+                        if (savedState === 'toggled') {
+                            $('#accordionSidebar').addClass('toggled');
+                            $('body').addClass('sidebar-toggled');
+                        } else {
+                            $('#accordionSidebar').removeClass('toggled');
+                            $('body').removeClass('sidebar-toggled');
+                        }
+                        
+                        // When coming back to desktop, if sidebar is toggled, keep all submenus closed
+                        closeSidebarCollapsesIfToggled();
+                    } else {
+                        // When switching to mobile, save current state before mobile auto-toggle
+                        var currentState = $('#accordionSidebar').hasClass('toggled') || $('body').hasClass('sidebar-toggled');
+                        localStorage.setItem('sidebarState', currentState ? 'toggled' : 'expanded');
+                        // Mobile will auto-toggle, so if saved state is 'expanded', override after a delay
+                        setTimeout(function() {
+                            if (localStorage.getItem('sidebarState') === 'expanded') {
+                                $('#accordionSidebar').removeClass('toggled');
+                                $('body').removeClass('sidebar-toggled');
+                            }
+                        }, 100);
+                    }
+                }
+            });
+        });
+    </script>
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.2/summernote.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/browser-image-compression@1.0.17/dist/browser-image-compression.js"></script>
+</body>
+</html>

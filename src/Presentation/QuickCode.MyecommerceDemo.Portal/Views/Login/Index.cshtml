@@ -1,0 +1,63 @@
+@model LoginData
+@{
+var queryCollection = Context.Request.Query;
+var routeData = new Dictionary<string, string>(queryCollection.Select(x => new KeyValuePair<string, string>(x.Key, x.Value!)));
+}
+<div class="row">
+    <div class="col-lg-6 d-lg-block position-relative">
+        <div class="d-flex flex-column h-100">
+            <div class="flex-grow-1">
+                <img src="/images/login_image.jpg" alt="Login Background" class="img-fluid w-100 h-100" style="object-fit: cover;" />
+            </div>
+            <div class="text-center p-1" style="background-color: #3b488e;">
+                <img src="/images/logo_s1.png" alt="Logo" class="img-fluid" style="max-height: 65px;" />
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="p-5">
+            <div class="text-center mb-4">
+                <h1 class="h4 text-gray-900">Welcome to MyecommerceDemo Portal!</h1>
+                <p class="text-muted">Sign in to your account</p>
+            </div>
+            <form class="user" asp-action="Index" asp-all-route-data="routeData" >
+                <div class="form-group">
+                    <input type="text" asp-for="Username" class="form-control form-control-user" aria-describedby="emailHelp" placeholder="Enter Email Address..." />
+                    <span asp-validation-for="Username" class="text-danger small"></span>
+                </div>
+                <div class="form-group">
+                    <input type="password" asp-for="Password" class="form-control form-control-user" autocomplete="on" placeholder="Password" />
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+                <div class="form-group">
+                    <div class="form-check d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input me-2" id="rememberMe" asp-for="RememberMe" />
+                        <label class="form-check-label mb-0" for="rememberMe">Remember Me</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                        Login
+                    </button>
+                </div>
+                <br />
+                <div class="text-center">
+                    <h1 class="h6 text-red-900 mt-1" style="color: red">@Model.ErrorMessage</h1>
+                </div>
+        
+            </form>
+            <hr>
+            <div class="text-center">
+                <a class="small" asp-action="ForgotPassword" asp-controller="Login">Forgot Password?</a>
+            </div>
+            <div class="text-center">
+                <a class="small" asp-action="Register" asp-controller="Login">Create an Account!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

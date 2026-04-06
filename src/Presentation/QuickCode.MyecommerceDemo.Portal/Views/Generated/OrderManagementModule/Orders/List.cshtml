@@ -1,0 +1,100 @@
+﻿@using QuickCode.MyecommerceDemo.Portal.Models.OrderManagementModule
+@model OrderManagementModule.OrderData
+@{
+    string title =  "OrderManagementModule.Order List".SplitCamelCaseToString();
+    string headerKey = "Header";
+    TempData["Title"] = title;
+    int startIndex = ((Model.CurrentPage - 1) * Model.PageSize) + 1;
+    int endIndex = ((Model.CurrentPage ) * Model.PageSize);
+    if (endIndex > Model.NumberOfRecord) {
+        endIndex = Model.NumberOfRecord;
+    }
+
+    var pagerData = new PagerData() { CurrentPage = Model.CurrentPage, NumberOfRecord = Model.NumberOfRecord, PageSize = Model.PageSize, TotalPage = Model.TotalPage, StartIndex = startIndex, EndIndex = endIndex } ;
+}
+<div class="container-fluid" IsPageAvailable="true">
+    <form method="post" id="formList">
+        <div class="card text shadow mb-4">
+            
+            <div class="card-body">
+                <h1 class="card-title">@title</h1>
+                <p class="card-text">You can manage your OrderManagementModule.Order table.</p>
+                <vc:insert-button controller-name="" action-name=""></vc:insert-button>
+                <hr class="col-xs-12">
+                 @if (Model.List.Count == 0)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        No Data available in OrderManagementModule.Order table.
+                    </div>
+                }
+                else
+                {
+                    <vc:pager pager-data=pagerData></vc:pager>
+                    <table bc-border="Bordered" bc-striped="true" bc-hover="true" class="table-responsive" bc-theme="Light">
+                        <thead bc-theme="Dark">
+                            <tr>
+                               <vc:operation-buttons item-id=@headerKey controller-name="" action-name=""></vc:operation-buttons>
+                               <th>Id</th>
+<th>Order Number</th>
+<th>Customer Id</th>
+<th>Status</th>
+<th>Total Amount</th>
+<th>Shipping Address Id</th>
+<th>Billing Address Id</th>
+<th>Shipping Method Id</th>
+<th>Payment Id</th>
+<th>Created Date</th>
+<th>Updated Date</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.List)
+                            {
+                            <tr>
+                                <vc:operation-buttons item-id=@item.GetKey() controller-name="" action-name=""></vc:operation-buttons>
+                                <td>@item.Id</td>
+<td>@item.OrderNumber</td>
+<td>@item.CustomerId</td>
+<td>@item.Status</td>
+<td>@item.TotalAmount</td>
+<td>			@string.Format("{0}", Model.GetComboBoxValue("Addresses", item.ShippingAddressId))</td>
+<td>			@string.Format("{0}", Model.GetComboBoxValue("Addresses", item.BillingAddressId))</td>
+<td>			@string.Format("{0}", Model.GetComboBoxValue("ShippingMethods", item.ShippingMethodId))</td>
+<td>@item.PaymentId</td>
+<td>@item.CreatedDate</td>
+<td>@item.UpdatedDate</td>
+
+                               </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+            @if (Model.List.Count > 0)
+            {
+            <div class="card-footer text-muted">
+                 <vc:pager pager-data=pagerData></vc:pager>
+            </div>
+            }
+        </div>
+        <input type="hidden" asp-for="CurrentPage" />
+        <input type="hidden" asp-for="SelectedKey" />
+    </form>
+
+    <div class="modal fade bd-example-modal-lg" id="itemDetailsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id="itemDetailsContainer">
+        </div>
+    </div>
+    
+</div>
+<div class="container-fluid" IsPageAvailable="false">
+ @await Html.PartialAsync("_NotAuthorized")
+</div>
+
+<script type="text/javascript">
+    window.addEventListener('load', (event) => {
+     $("img.lazyload").lazyload();
+    });
+</script>
+

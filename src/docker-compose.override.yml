@@ -1,0 +1,150 @@
+services:
+  myecommerce-demo-pg-data:
+    ports:
+      - "${PGSQL_PORT:-5432}:5432"
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=dockerf
+    volumes:
+      - quickcode-myecommerce-demo-pg-data:/var/lib/postgresql
+  
+  myecommerce-demo-mysql-data:
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+    volumes:
+      - quickcode-myecommerce-demo-mysql-data:/var/lib/mysql
+      - "~/sql-scripts/setup.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootDocker!
+      - MYSQL_USER=docker
+      - MYSQL_PASSWORD=dockerf
+
+  myecommerce-demo-sql-data:
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "${SQL_PORT:-5433}:1433"
+    volumes:
+      - quickcode-myecommerce-demo-sql-data:/var/opt/mssql
+
+  myecommerce-demo-elasticsearch:
+    environment:
+      - xpack.security.enabled=false
+      - discovery.type=single-node
+    deploy:
+      resources:
+        limits:
+          memory: 1GB
+    ports:
+      - "${ELASTIC_PORT:-9200}:9200"
+    volumes:
+      - quickcode-myecommerce-demo-elasticsearch-data:/usr/share/elasticsearch/data
+    restart: always
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    healthcheck:
+      test: curl -s http://myecommerce-demo-elasticsearch:9200 >/dev/null || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  myecommerce-demo-kibana:
+    environment:
+      - ELASTICSEARCH_HOSTS=http://myecommerce-demo-elasticsearch:9200
+    ports:
+      - "${KIBANA_PORT:-5601}:5601"
+    volumes:
+      - quickcode-myecommerce-demo-kibana-data:/usr/share/kibana/data
+    restart: always
+    depends_on:
+      - myecommerce-demo-elasticsearch
+
+  quickcode-myecommerce-demo-gateway-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "${GATEWAY_PORT:-6060}:80"
+
+  quickcode-myecommerce-demo-identity-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - QUICKCODE_JWT_SECRET_KEY=5FgvoxHEPKCSuFm7aCdSJM2wKtNXgc7GKfCGNpIhvDS7kOZGTSSE1pCFg3PCoQU5
+    ports:
+      - "6001:80"
+
+
+  quickcode-myecommerce-demo-auction-management-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6002:80"
+
+
+  quickcode-myecommerce-demo-order-management-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6003:80"
+
+
+  quickcode-myecommerce-demo-payment-processing-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6004:80"
+
+
+  quickcode-myecommerce-demo-product-catalog-module-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      
+    ports:
+      - "6005:80"
+
+
+#[-WEB-]
+  quickcode-myecommerce-demo-portal:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+      - AZURE_ACCOUNT_NAME=quickcodeblobstorage
+      - AZURE_ACCOUNT_KEY=azureAccountKeySecret
+      - AZURE_BLOB_CONTAINER_NAME=images
+    ports:
+      - "${PORTAL_PORT:-6020}:80"
+      
+  quickcode-myecommerce-demo-event-listener-service:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Local
+      - ASPNETCORE_URLS=http://+
+    ports:
+      - "${EVENT_LISTENER_PORT:-6100}:80"
+      
+volumes:
+  quickcode-myecommerce-demo-pg-data:
+    external: false
+    
+  quickcode-myecommerce-demo-mysql-data:
+    external: false
+    
+  quickcode-myecommerce-demo-sql-data:
+    external: false
+    
+  quickcode-myecommerce-demo-elasticsearch-data:
+    external: false
+    
+  quickcode-myecommerce-demo-kibana-data:
+    external: false

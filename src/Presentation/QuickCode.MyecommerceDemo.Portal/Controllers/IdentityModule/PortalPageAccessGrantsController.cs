@@ -1,0 +1,55 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using QuickCode.MyecommerceDemo.Portal.Models;
+using QuickCode.MyecommerceDemo.Portal.Helpers;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using Microsoft.AspNetCore.Authorization;
+using QuickCode.MyecommerceDemo.Portal.Helpers.Authorization;
+using Microsoft.AspNetCore.Http;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace QuickCode.MyecommerceDemo.Portal.Controllers.IdentityModule
+{
+    [Permission("IdentityModulePortalPageAccessGrants")]
+    public partial class PortalPageAccessGrantsController : BaseController
+    {
+        [Route("GetGroupPermissions")]
+        [HttpGet]
+        public async Task<IActionResult> GetGroupPermissions()
+        {
+            var model = GetModel<GetPortalPageAccessGrantData>();
+            var groups = await pagePermissionGroupClient.PermissionGroupsListAsync();
+            model.SelectedGroupName = groups.First().Name;
+            model.ComboList = await FillPageComboBoxes(model.ComboList);
+            model.Items = await pagePortalPageDefinitionClient.PortalPageDefinitionsGetPortalPageDefinitionsAsync(model.SelectedGroupName);
+            SetModelBinder(ref model);
+            return View("PortalPageAccessGrants", model);
+        }
+
+        [Route("GetGroupPermissions")]
+        [HttpPost]
+        public async Task<IActionResult> GetGroupPermissions(GetPortalPageAccessGrantData model)
+        {
+            ModelBinder(ref model);
+            model.Items = await pagePortalPageDefinitionClient.PortalPageDefinitionsGetPortalPageDefinitionsAsync(model.SelectedGroupName);
+            SetModelBinder(ref model);
+            return View("PortalPageAccessGrants", model);
+        }
+
+        [Route("UpdatePermission")]
+        [HttpPost]
+        public async Task<JsonResult> UpdatePermission(UpdateGroupAuthorizationRequestData model)
+        {
+            var result = await pagePortalPageDefinitionClient.PortalPageDefinitionsUpdatePortalPagePermissionAsync(model);
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPageDefinitions");
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPageAccessGrants");
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPagePermissionTypes");
+            HttpContextAccessor.HttpContext!.Session.Remove("MenuItems");
+            return Json(result);
+        }
+    }
+}
+

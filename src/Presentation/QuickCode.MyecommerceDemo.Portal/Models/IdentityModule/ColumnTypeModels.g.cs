@@ -1,0 +1,28 @@
+﻿using QuickCode.MyecommerceDemo.Common.Nswag.Clients.IdentityModuleApi.Contracts;
+using System;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Collections.Generic;
+using System.Linq;
+using QuickCode.MyecommerceDemo.Portal.Helpers;
+
+namespace QuickCode.MyecommerceDemo.Portal.Models.IdentityModule
+{
+    public class ColumnTypeData : BaseComboBoxModel
+    {
+        public int TotalPage { get; set; }
+        public int CurrentPage { get; set; }
+        public int PageSize { get; set; }
+        public int NumberOfRecord { get; set; }
+        public string SelectedKey { get; set; }
+        public ColumnTypeDto SelectedItem { get; set; }
+        public List<ColumnTypeDto> List { get; set; }
+    }
+
+    public static partial class ColumnTypeExtensions
+    {
+        public static string GetKey(this ColumnTypeDto dto)
+        {
+            return $"{dto.Id}";
+        }
+    }
+}

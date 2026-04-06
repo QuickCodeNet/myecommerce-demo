@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" />
+    <PackageReference Include="Moq" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../QuickCode.MyecommerceDemo.IdentityModule.Persistence/QuickCode.MyecommerceDemo.IdentityModule.Persistence.csproj" />
+    <ProjectReference Include="../../Core/QuickCode.MyecommerceDemo.IdentityModule.Application/QuickCode.MyecommerceDemo.IdentityModule.Application.csproj" />
+    <ProjectReference Include="../../Core/QuickCode.MyecommerceDemo.IdentityModule.Domain/QuickCode.MyecommerceDemo.IdentityModule.Domain.csproj" />
+  </ItemGroup>
+
+</Project> 

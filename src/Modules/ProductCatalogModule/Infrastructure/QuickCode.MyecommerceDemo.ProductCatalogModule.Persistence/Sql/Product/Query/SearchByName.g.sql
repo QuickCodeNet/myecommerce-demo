@@ -1,0 +1,6 @@
+﻿SELECT P.[ID], P.[SKU], P.[NAME], P.[PRICE] 
+FROM [PRODUCTS] P 
+WHERE P.[IsDeleted] = 0 
+	AND P.[NAME] LIKE '%' + @PRM_PRODUCT_NAME + '%' 
+ORDER BY P.[ID] 
+OFFSET @StartIndex ROWS FETCH NEXT @PageSize ROWS ONLY 

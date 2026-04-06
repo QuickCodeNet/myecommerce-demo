@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using QuickCode.MyecommerceDemo.Portal.Models;
+using QuickCode.MyecommerceDemo.Portal.Helpers;
+using Microsoft.AspNetCore.Mvc;
+using System.IO;
+using Microsoft.AspNetCore.Authorization;
+using QuickCode.MyecommerceDemo.Portal.Helpers.Authorization;
+using Microsoft.AspNetCore.Http;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace QuickCode.MyecommerceDemo.Portal.Controllers.IdentityModule
+{
+    [Permission("IdentityModuleApiMethodAccessGrants")]
+    public partial class ApiMethodAccessGrantsController : BaseController
+    {
+        [Route("GetModulePermissions")]
+        [HttpGet]
+        public async Task<IActionResult> GetModulePermissions()
+        {
+            var model = GetModel<GetApiMethodAccessGrantData>();
+            var groups = await pagePermissionGroupClient.PermissionGroupsListAsync();
+            model.SelectedGroupName = groups.First().Name;
+            model.ComboList = await FillPageComboBoxes(model.ComboList);
+            model.Items = await pageApiMethodDefinitionClient.ApiMethodDefinitionsGetApiPermissionsAsync(model.SelectedGroupName);
+            SetModelBinder(ref model);
+            return View("ApiMethodAccessGrants", model);
+        }
+
+        [Route("GetModulePermissions")]
+        [HttpPost]
+        public async Task<IActionResult> GetModulePermissions(GetApiMethodAccessGrantData model)
+        {
+            ModelBinder(ref model);
+            model.Items = await pageApiMethodDefinitionClient.ApiMethodDefinitionsGetApiPermissionsAsync(model.SelectedGroupName);
+            SetModelBinder(ref model);
+            return View("ApiMethodAccessGrants", model);
+        }
+
+        [Route("UpdatePermission")]
+        [HttpPost]
+        public async Task<JsonResult> UpdatePermission(UpdateGroupAuthorizationApiRequestData model)
+        {
+            var result = await pageApiMethodDefinitionClient.ApiMethodDefinitionsUpdateApiPermissionAsync(model);
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPageDefinitions");
+            HttpContextAccessor.HttpContext!.Session.Remove("ApiPermissions");
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPageAccessGrants");
+            HttpContextAccessor.HttpContext!.Session.Remove("ApiMethodAccessGrants");
+            HttpContextAccessor.HttpContext!.Session.Remove("PortalPagePermissionTypes");
+            HttpContextAccessor.HttpContext!.Session.Remove("MenuItems");
+            return Json(result);
+        }
+
+    }
+}
+

@@ -1,0 +1,4 @@
+﻿UPDATE [BIDS] 
+	SET [STATUS] = 'WINNING' 
+WHERE [IsDeleted] = 0 
+	AND [ID] = @PRM_BID_ID
